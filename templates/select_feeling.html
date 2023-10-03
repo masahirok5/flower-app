@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="feeling-p">
+    お花にどんなキモチを込めたいですか？
+</p>
+    <div class="feeling-img">
+        <img src="{{ url_for('static', filename=img_name) }}" width="auto" height="170px">
+        <div class="feeling-value">
+            <span class="tax">(税込み)</span>
+            <span>{{ value }}円</span>
+        </div>
+    </div>
+
+    <div class="feeling-container">
+        <a class="feeling-love" href="{{ url_for('select_words', shape=preference.shape, feeling='love') }}">好きです</a>
+        <a class="feeling-thanks" href="{{ url_for('select_words', shape=preference.shape, feeling='thanks') }}">ありがとう</a>
+    </div>
+    <div class="feeling-container">
+        <a class="feeling-celebration" href="{{ url_for('select_words', shape=preference.shape, feeling='celebration') }}">おめでとう</a>
+        <a class="feeling-business" href="{{ url_for('select_words', shape=preference.shape, feeling='business') }}">成功を願う</a>
+    </div> 
+
+
+
+
+{% endblock %}
+

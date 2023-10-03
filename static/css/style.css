@@ -1,0 +1,530 @@
+/* common setting */
+body {
+    background-color: #E7E6E6;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* top page */
+/* ========================== */
+.top-container {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.top-container p {
+    margin: 10px
+}
+
+.top-container img {
+    display: block;
+    margin: 15vh auto;
+
+}
+
+#start-button {
+    text-decoration: none;
+    width: 100px;
+    color: white;
+    border-radius: 25px;
+    background-color: #707560;
+    padding: 8px 30px;
+    box-shadow: 1px 2px black;
+
+}
+
+#start-button:hover {
+    box-shadow: 0 1px black;
+}
+
+/* ========================== */
+
+
+/* major_div page */
+/* ========================== */
+.major-container {
+    text-align: center;
+}
+
+#welcome {
+    margin: 10vh;
+}
+
+.major-container p {
+    margin: 10px
+}
+
+.major-div-container {
+    display: flex;
+    justify-content: center;
+}
+
+.major-div-container a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    background-color: #707560;  
+    width: 120px; 
+    padding: 40px 5px;
+    border-radius: 25px;
+    margin: 5px;  
+    box-shadow: 1px 2px black;
+}
+
+.major-div-container a:hover {
+    box-shadow: 0 1px black;
+    
+}
+
+#others {
+    padding: 30px 5px;
+}
+
+/* ========================== */
+
+
+/* select_shape page */
+/* ========================== */
+.shape-p {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.shape-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+}
+
+.shape-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shape-item a {
+    text-decoration: none;
+    color: white;
+    background-color: #707560;    
+    padding: 2px 5px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    margin: 10px;
+    box-shadow: 0.5px 1.5px black;
+    font-size: 12px;
+}
+
+.shape-item a:hover {
+    box-shadow: 0 0.5px black;
+}
+
+.shape-value-wrapper {
+    display: flex;
+}
+
+.shape-item #others {
+    padding: 10px 10px;
+    border-radius: 100px 120px 90px 70px / 30px 50px 30px 40px;
+    box-shadow: 0.5px 1.5px black;
+}
+
+.shape-item #others:hover {
+    box-shadow: 0 0.5px black;
+}
+
+.tax {
+    font-size: 12px;
+}
+
+/* ========================== */
+
+/* select_feeling page */
+/* ========================== */
+.feeling-p {
+    padding-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.feeling-img {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.feeling-value {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.feeling-container {
+    display: flex;
+    justify-content: center;
+}
+
+.feeling-love {
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(90deg, #fff7ad, #ffa9f9);
+    padding: 20px 20px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    margin: 30px 30px;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+.feeling-love:hover {
+    box-shadow: 0 0.5px #707560;
+}
+
+.feeling-thanks {
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(90deg, #0097b2, #7ed957); 
+    padding: 40px 15px;
+    border-radius: 140px 200px 190px 110px / 200px 200px 140px 110px;
+    margin: 10px 30px;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+.feeling-thanks:hover {
+    box-shadow: 0 0.5px #707560;
+}
+
+.feeling-celebration {
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(90deg, #ffde59, #ff914d);  
+    padding: 40px 10px;
+    border-radius: 100px 50px 100px 50px / 90px 50px 90px 50px;
+    margin: 10px 25px;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+.feeling-celebration:hover {
+    box-shadow: 0 0.5px #707560;
+}
+
+.feeling-business {
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);  
+    padding: 20px 25px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    margin: 30px 30px;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+.feeling-business:hover {
+    box-shadow: 0 0.5px #707560;
+}
+
+/* ========================== */
+
+
+/* select_words page */
+/* ========================== */
+.words-p {
+    padding-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.words-feeling-love {
+    text-decoration: none;
+    color: black;
+    width: 60px;
+    background-image: linear-gradient(90deg, #fff7ad, #ffa9f9);
+    padding: 20px 35px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    margin: 40px auto;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+.words-feeling-thanks {
+    text-decoration: none;
+    color: black;
+    width: 70px;
+    background-image: linear-gradient(90deg, #0097b2, #7ed957); 
+    padding: 40px 15px;
+    border-radius: 140px 200px 190px 110px / 200px 200px 140px 110px;
+    margin: 40px auto;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+.words-feeling-celebration {
+    text-decoration: none;
+    color: black;
+    width: 75px;
+    background-image: linear-gradient(90deg, #ffde59, #ff914d);  
+    padding: 40px 1px;    
+    border-radius: 100px 60px 100px 60px / 90px 90px 90px 90px;
+    margin: 40px auto;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+.words-feeling-business {
+    text-decoration: none;
+    color: black;
+    width: 75px;
+    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);  
+    padding: 20px 25px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    margin: 40px auto;
+    box-shadow: 0.5px 1.5px #707560;
+    text-align: center;
+}
+
+.words-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.words-container a {
+    width: 250px;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    /* box-shadow: 0 1px #707560; */
+}
+
+/* .words-container a:hover {
+    box-shadow: 0 0.5px #707560;
+} */
+
+.double-circle {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(90deg, #0cc0df, #ffde59);   /* 外側の円の色を設定 */
+    border-radius: 50%; /* 円形の要素にする */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#circle0 {
+    background-image: linear-gradient(90deg, #0cc0df, #ffde59);   /* 外側の円の色を設定 */
+}
+
+#circle1 {
+    background-image: linear-gradient(90deg, #ffde59, #ff914d);   /* 外側の円の色を設定 */
+}
+
+#circle2 {
+    background-image: linear-gradient(90deg, #fff7ad, #ffa9f9);   /* 外側の円の色を設定 */
+}
+
+#circle3 {
+    background-image: linear-gradient(90deg, #ff3131, #ff914d);   /* 外側の円の色を設定 */
+}
+  
+.inner-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #E7E6E6; /* 内側の円の色を設定 */
+    border-radius: 50%; /* 円形の要素にする */
+    position: absolute;
+}
+
+ .words-container #others{
+    padding: 0;
+ } 
+
+
+/* ========================== */
+
+/* select_flower page */
+/* ========================== */
+.flower-p {
+    padding-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#feeling-word {
+    width: 320px;
+    color: black;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.flower-container {
+    display: flex;
+    margin: 20px;
+}
+
+.flower-container img {
+    margin-right: 20px;
+}
+
+.flower-lang-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#red-color {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(90deg, #fff7ad, #ffa9f9);
+    padding: 7px 5px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+#green-color {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(90deg, #0097b2, #7ed957); 
+    padding: 7px 5px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+#yellow-color {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(90deg, #ffde59, #ff914d);      
+    padding: 7px 5px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+#blue-color {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);  
+    padding: 7px 5px;
+    border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
+    box-shadow: 0.5px 1.5px #707560;
+}
+
+.merchandise-word {
+    font-size: 11px;
+}
+
+/* ========================== */
+
+/* confirmation page */
+/* ========================== */
+.confirmation-p {
+    padding: 10px;
+    text-align: center;
+}
+
+#confirmation-value {
+    text-decoration: underline;
+}
+
+.confirmation-container {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+#confirmation-button {
+    text-decoration: none;
+    width: 100px;
+    color: white;
+    border-radius: 25px;
+    background-color: #707560;
+    padding: 8px 30px;
+    box-shadow: 1px 2px black;
+
+}
+
+#confirmation-button:hover {
+    box-shadow: 0px 1px black;
+}
+
+/* ========================== */
+
+/* select_feeling_uptoyou page */
+/* ========================== */
+.uptoyou-feeling-p {
+    margin: 60px;
+    text-align: center;
+}
+
+.uptoyou-feeling-container {
+    display: flex;
+    justify-content: center;
+}
+
+.uptoyou-feeling-container a {
+    width: 70px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #707560;    
+    padding: 40px 15px;
+    border-radius: 25px;
+    margin: 30px;  
+    box-shadow: 1px 2px black;
+}
+
+.uptoyou-feeling-container a:hover {
+    box-shadow: 0 1px black;
+    
+}
+
+/* ========================== */
+
+/* select_flower_uptoyou page */
+/* ========================== */
+.uptoyou-flower-p {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.uptoyou-flower-container {
+    display: flex;
+    justify-content: center;
+}
+
+.uptoyou-flower-container a {
+    display: block;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: #707560;    
+    padding: 40px 10px;
+    border-radius: 25px;
+    margin: 20px;  
+    box-shadow: 1px 2px black;
+}
+
+.uptoyou-flower-container a:hover {
+    box-shadow: 0 1px black;
+    
+}
+
+
+/* スマホ用 */
+@media (max-width: 500px) { 
+
+}
+
+/* タブレット 縦 用*/
+@media (min-width: 501px) and (max-width: 900px) { 
+
+}
+
+/* タブレット 横 用*/
+@media (min-width: 901px) and (max-width: 1200px) { 
+
+}
+
+/* PC用*/
+@media (min-width: 1201px) { 
+
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flower-p">
+    <p>あなたの気持ちにぴったりな花をセレクトしました</p>
+    <p>お好きな花を１つチョイスしてください</p>
+</div>
+<div class="words-container">
+    <div class="double-circle" id="circle{{preference.words}}">
+        <div class="inner-circle"></div>
+    </div>
+    <span id="feeling-word">
+        {{ feeling_word }}
+    </span>
+</div>
+{% for i in range(3) %}
+<div class="flower-container">
+    <img src="{{ url_for('static', filename=merchandise[i][1]) }}" width="auto" height="140px">
+    <div clas="flower-lang-container">
+        <br>
+        <a id="{{merchandise[i][4]}}" href="{{ url_for('confirmation', shape=preference.shape, feeling=preference.feeling, words=preference.words, flower=merchandise[i][0]) }}">
+            {{ merchandise[i][2] }}    
+        </a>
+        <p class="merchandise-word">{{ merchandise[i][3] }}</p>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+

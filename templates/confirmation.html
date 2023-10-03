@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="confirmation-p">
+    <p>あなたのキモチを下記で表します。</p>
+    <p>お間違いがないかご確認ください</p>
+    
+    {% if preference.shape == "one" %}
+        <p>一輪</p>
+        <p id="confirmation-value">1000円</p>
+    {% elif preference.shape == "s-bouquet" %}
+        <p>ブーケ</p>
+        <p id="confirmation-value">Sサイズ　3000円</p>
+    {% elif preference.shape == "m-bouquet" %}
+        <p>ブーケ</p>
+        <p id="confirmation-value">Mサイズ　5000円</p>
+    {% elif preference.shape == "l-bouquet" %}
+        <p>ブーケ</p>
+        <p id="confirmation-value">Lサイズ　10000円</p>
+    {% elif preference.shape == "cup" %}
+        <p>カップ</p>
+        <p id="confirmation-value">2000円</p>
+    {% elif preference.shape == "driedflower" %}
+        <p>ドライフラワー</p>
+        <p id="confirmation-value">3000円</p>
+    {% elif preference.shape == "giftflower" %}
+        <p>ギフトフラワー</p>
+        <p id="confirmation-value">10000円</p>
+    {% elif preference.shape == "a-wineflower" %}
+        <p>ワインフラワー</p>
+        <p id="confirmation-value">A　10000円</p>
+    {% else %}
+        <p>ワインフラワー</p>
+        <p id="confirmation-value">B　15000円</p>
+    {% endif %}
+</div>
+
+{% if preference.feeling == "love" %}
+    <p class="words-feeling-love">好きです</p>
+{% elif preference.feeling == "thanks" %}
+    <p class="words-feeling-thanks">ありがとう</p>
+{% elif preference.feeling == "celebration" %}
+    <p class="words-feeling-celebration">おめでとう</p>
+{% else %}
+    <p class="words-feeling-business">成功を願う</p>
+{% endif %}
+
+<div class="words-container">
+    <div class="double-circle" id="circle{{preference.words}}">
+        <div class="inner-circle"></div>
+    </div>
+    <span id="feeling-word">
+        {{ feeling_word }}
+    </span>
+</div>
+
+<div class="flower-container">
+    <img src="{{ url_for('static', filename=merchandise[1]) }}" width="auto" height="140px">
+    <div clas="flower-lang-container">
+        <br>
+        <span id="{{merchandise[4]}}">
+            {{ merchandise[2] }}    
+        </span>
+        <p class="merchandise-word">{{ merchandise[3] }}</p>
+    </div>
+</div>
+
+<div class="confirmation-container">
+    <a id="confirmation-button" href="{{ url_for('bill', shape=preference.shape, feeling=preference.feeling, words=preference.words, flower=preference.flower) }}">お会計に進む</a>
+</div>
+{% endblock %}
+

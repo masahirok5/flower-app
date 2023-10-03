@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="shape-p">
+    あなたの気持ちを<br>
+    どのカタチで表しますか？</p>
+<div class="shape-container">
+    <div class="shape-item">
+        <p>➀一輪</p>
+        <img src="{{ url_for('static', filename='image/shape/one.png') }}", width="auto", height="100px">
+    </div>
+    <div class="shape-item">
+        <p>➁ブーケ</p>
+        <img src="{{ url_for('static', filename='image/shape/bouquet.png') }}", width="auto", height="100px">
+    </div>
+    <div class="shape-item">
+        <a href="{{ url_for('confirmation', shape='one', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">1000円<br><span class="tax">(税込み)</span></a>
+    </div>
+    <div class="shape-item">        
+        <div class="shape-value-wrapper">
+            <a href="{{ url_for('confirmation', shape='s-bouquet', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">S 3000円<br><span class="tax">(税込み)</span></a>
+            <a href="{{ url_for('confirmation', shape='m-bouquet', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">M 5000円<br><span class="tax">(税込み)</span></a>
+        </div>
+        <a id="others" href="{{ url_for('confirmation', shape='l-bouquet', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">L 10000円<span class="tax">(税込み)</span></a>
+    </div>
+    <div class="shape-item">
+        <p>③カップ</p>
+        <img src="{{ url_for('static', filename='image/shape/cup.png') }}", width="auto", height="100px">
+    </div>
+    <div class="shape-item">
+        <p>④ドライフラワー</p>
+        <img src="{{ url_for('static', filename='image/shape/driedflower.png') }}", width="auto", height="100px">
+    </div>
+    <div class="shape-item">
+        <a href="{{ url_for('confirmation', shape='cup', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">2000円<br><span class="tax">(税込み)</span></a>
+    </div>
+    <div class="shape-item">
+        <a href="{{ url_for('confirmation', shape='driedflower', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">3000円<br><span class="tax">(税込み)</span></a>
+    </div>
+    <div class="shape-item">
+        <p>⑤ギフトフラワー</p>
+        <img src="{{ url_for('static', filename='image/shape/giftflower.png') }}", width="auto", height="100px">
+    </div>
+    <div class="shape-item">
+        <p>⑥ワインフラワー</p>
+        <img src="{{ url_for('static', filename='image/shape/wineflower.png') }}", width="auto", height="100px">
+    </div>
+    <div class="shape-item">
+        <a href="{{ url_for('confirmation', shape='giftflower', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">フラワーバックのみ<br>10000円<span class="tax">(税込み)</span></a>
+    </div>
+    <div class="shape-item">        
+        <a href="{{ url_for('confirmation', shape='a-wineflower', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">A ワイン+フラワー<br>15000円<span class="tax">(税込み)</span></a>
+        <a href="{{ url_for('confirmation', shape='b-wineflower', feeling=preference.feeling, words=preference.words, flower=merchandise[0]) }}">B ワイン+フラワー<br>20000円<span class="tax">(税込み)</span></a>
+    </div>
+    <div class="shape-item">
+        <p>⑦相談</p>
+    </div>
+</div>
+
+{% endblock %}

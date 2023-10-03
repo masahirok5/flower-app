@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="feeling-p">
+    お花にどんなキモチを込めたいですか？
+</p>
+    <div class="feeling-img">
+        {% if "bouquet" in preference.shape %}
+        <p>aa</p>
+        {% elif "wineflower" in preference.shape %}
+            <img src="{{ url_for('static', filename='image/shape/wineflower.png') }}" width="auto" height="50%">
+        {% else %}
+        {% endif %}
+        <div class="feeling-value">
+            <span class="tax">(税込み)</span>
+            <span>{{ value }}円</span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+<h1>最初に戻る　一つ戻る</h1>
+{% endblock %}
