@@ -1,7 +1,8 @@
 /* common setting */
 body {
     background-color: #E7E6E6;
-    font-family: 'Noto Serif JP', serif;
+    /* font-family: 'Noto Serif JP', serif; */
+    font-family: 'Kiwi Maru', serif;
     font-size: 14px;
     font-weight: bold;
 }
@@ -65,7 +66,7 @@ body {
     display: block;
     color: white;
     background-color: #707560;  
-    width: 120px; 
+    width: 100px; 
     padding: 40px 5px;
     border-radius: 25px;
     margin: 5px;  
@@ -78,7 +79,7 @@ body {
 }
 
 #others {
-    padding: 30px 5px;
+    padding: 20px 5px;
 }
 
 /* ========================== */
@@ -108,11 +109,11 @@ body {
     text-decoration: none;
     color: white;
     background-color: #707560;    
-    padding: 2px 5px;
+    padding: 4px 10px;
     border-radius: 70px 90px 90px 70px / 30px 50px 30px 40px;
-    margin: 10px;
+    margin: 7px;
     box-shadow: 0.5px 1.5px black;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .shape-item a:hover {
@@ -134,7 +135,7 @@ body {
 }
 
 .tax {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 /* ========================== */
@@ -425,7 +426,7 @@ body {
 
 .confirmation-container {
     text-align: center;
-    margin-top: 50px;
+    margin: 50px auto;
 
 }
 
@@ -459,7 +460,7 @@ body {
 }
 
 .uptoyou-feeling-container a {
-    width: 70px;
+    width: 80px;
     text-decoration: none;
     display: block;
     text-align: center;
@@ -467,7 +468,7 @@ body {
     background-color: #707560;    
     padding: 40px 15px;
     border-radius: 25px;
-    margin: 30px;  
+    margin: 20px;  
     box-shadow: 1px 2px black;
 }
 

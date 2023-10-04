@@ -46,11 +46,11 @@
         <img src="{{ url_for('static', filename='image/shape/wineflower.png') }}", width="auto", height="100px">
     </div>
     <div class="shape-item">
-        <a href="{{ url_for('select_feeling', shape='giftflower') }}">フラワーバックのみ<br>10000円<span class="tax">(税込み)</span></a>
+        <a id="others" href="{{ url_for('select_feeling', shape='giftflower') }}">フラワーバックのみ<br>10000円<span class="tax">(税込み)</span></a>
     </div>
     <div class="shape-item">        
-        <a href="{{ url_for('select_feeling', shape='a-wineflower') }}">A ワイン+フラワー<br>15000円<span class="tax">(税込み)</span></a>
-        <a href="{{ url_for('select_feeling', shape='b-wineflower') }}">B ワイン+フラワー<br>20000円<span class="tax">(税込み)</span></a>
+        <a id="others" href="{{ url_for('select_feeling', shape='a-wineflower') }}">A ワイン+フラワー<br>15000円<span class="tax">(税込み)</span></a>
+        <a id="others" href="{{ url_for('select_feeling', shape='b-wineflower') }}">B ワイン+フラワー<br>20000円<span class="tax">(税込み)</span></a>
     </div>
     <div class="shape-item">
         <p>⑦相談</p>
