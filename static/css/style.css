@@ -21,7 +21,7 @@ body {
 .top-container img {
     display: block;
     margin: 15vh auto;
-
+    mix-blend-mode: multiply;
 }
 
 #start-button {
