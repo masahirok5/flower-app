@@ -4,15 +4,17 @@
 <p class="words-p">
     そのキモチに近い言葉を教えてください
 </p>
-{% if preference.feeling == "love" %}
-    <p class="words-feeling-love">好きです</p>
-{% elif preference.feeling == "thanks" %}
-    <p class="words-feeling-thanks">ありがとう</p>
-{% elif preference.feeling == "celebration" %}
-    <p class="words-feeling-celebration">おめでとう</p>
-{% else %}
-    <p class="words-feeling-business">成功を願う</p>
-{% endif %}
+<div class="words-feeling-container">
+    {% if preference.feeling == "love" %}
+        <p class="words-feeling-love">好きです</p>
+    {% elif preference.feeling == "thanks" %}
+        <p class="words-feeling-thanks">ありがとう</p>
+    {% elif preference.feeling == "celebration" %}
+        <p class="words-feeling-celebration">おめでとう</p>
+    {% else %}
+        <p class="words-feeling-business">成功を願う</p>
+    {% endif %}
+</div>
 
 {% for i in range(length) %}
 <div class="words-container">
