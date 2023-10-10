@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="words-p">
+    そのキモチに近い言葉を教えてください
+</p>
+<div class="words-feeling-container">
+    {% if preference.feeling == "love" %}
+        <p class="words-feeling-love">好きです</p>
+    {% elif preference.feeling == "thanks" %}
+        <p class="words-feeling-thanks">ありがとう</p>
+    {% elif preference.feeling == "celebration" %}
+        <p class="words-feeling-celebration">おめでとう</p>
+    {% else %}
+        <p class="words-feeling-business">成功を願う</p>
+    {% endif %}
+</div>
+
+{% for i in range(length) %}
+<div class="words-container">
+    <div class="double-circle" id="circle{{i}}">
+        <div class="inner-circle"></div>
+    </div>
+    <a href="{{ url_for('select_flower_uptoyou', feeling=preference.feeling, words=i) }}">
+        {{words_list[i]}}
+    </a>
+</div>
+<br>
+
+{% endfor %}
+
+
+{% endblock %}
+

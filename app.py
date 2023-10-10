@@ -178,26 +178,28 @@ def completion():
 def select_feeling_uptoyou():
     return render_template("/uptoyou/select_feeling_uptoyou.html")
 
+# お任せ　言葉を選ぶページ
+@app.route("/select_words_uptoyou/<feeling>/", methods=["GET"])
+def select_words_uptoyou(feeling):
+    preference = Preference(feeling=feeling)
+    words_list = feeling_words[feeling]
+    return render_template("/uptoyou/select_words_uptoyou.html", preference=preference, words_list=words_list, length=len(words_list))
+
+
 # お任せ　花を選ぶページ
-@app.route("/select_flower_uptoyou/<feeling>", methods=["GET"])
-def select_flower_uptoyou(feeling):
-    if feeling == "love":
-        index = random.randint(0, len(feeling_words[feeling])-1)
-        flower = love_reasonable[index]
-        feeling_word = feeling_words[feeling][index]
-    elif feeling == "thanks":
-        index = random.randint(0, len(feeling_words[feeling])-1)
-        flower = thanks_reasonable[index]
-        feeling_word = feeling_words[feeling][index]
-    elif feeling == "celebration":
-        index = random.randint(0, len(feeling_words[feeling])-1)
-        flower = celebration_reasonable[index]
-        feeling_word = feeling_words[feeling][index]
+@app.route("/select_flower_uptoyou/<feeling>/<int:words>", methods=["GET"])
+def select_flower_uptoyou(feeling, words):
+    preference = Preference(feeling=feeling, words=words)
+    feeling_word = feeling_words[feeling][words]
+
+    if feeling=="love":
+        flower = love_reasonable[words]
+    elif feeling=="celebration":
+        flower = celebration_reasonable[words]
+    elif feeling=="thanks":
+        flower = thanks_reasonable[words]
     else:
-        index = random.randint(0, len(feeling_words[feeling])-1)
-        flower = business_reasonable[index]
-        feeling_word = feeling_words[feeling][index]
-    preference = Preference(feeling=feeling, words=index)
+        flower = business_reasonable[words]
     
     merchandise=[flower, "image/merchandise/"+flower+".webp", flower_lang[flower][1], "この花には"+flower_lang[flower][2]+"人へピッタリな花になっています", flower_lang[flower][3]+"-color"]
 
