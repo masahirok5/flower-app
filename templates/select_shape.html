@@ -6,55 +6,49 @@
     どのカタチで表しますか？</p>
 <div class="shape-container">
     <div class="shape-item">
+        <img src="{{ url_for('static', filename='image/shape/one.png') }}", width="140px", height="140px">
         <p>➀一輪</p>
-        <img src="{{ url_for('static', filename='image/shape/one.png') }}", width="auto", height="100px">
+        <a href="{{ url_for('select_feeling', shape='one') }}">1000円<span class="tax">(税込み)</span></a>
     </div>
     <div class="shape-item">
+        <img src="{{ url_for('static', filename='image/shape/bouquet.png') }}", width="140px", height="140px">
         <p>➁ブーケ</p>
-        <img src="{{ url_for('static', filename='image/shape/bouquet.png') }}", width="auto", height="100px">
-    </div>
-    <div class="shape-item">
-        <a href="{{ url_for('select_feeling', shape='one') }}">1000円<br><span class="tax">(税込み)</span></a>
-    </div>
-    <div class="shape-item">        
-        <div class="shape-value-wrapper">
-            <a href="{{ url_for('select_feeling', shape='s-bouquet') }}">S 3000円<br><span class="tax">(税込み)</span></a>
-            <a href="{{ url_for('select_feeling', shape='m-bouquet') }}">M 5000円<br><span class="tax">(税込み)</span></a>
+        <span class="shape-item-size">大きさを選ぶ<span class="expand-bouquet"> ∨</span></span>
+        <div class="shape-value-wrapper-three">
+            <a href="{{ url_for('select_feeling', shape='s-bouquet') }}">S 3000円<span class="tax">(税込み)</span></a>
+            <a href="{{ url_for('select_feeling', shape='m-bouquet') }}">M 5000円<span class="tax">(税込み)</span></a>
+            <a href="{{ url_for('select_feeling', shape='l-bouquet') }}">L 10000円<span class="tax">(税込み)</span></a>
         </div>
-        <a id="others" href="{{ url_for('select_feeling', shape='l-bouquet') }}">L 10000円<span class="tax">(税込み)</span></a>
     </div>
     <div class="shape-item">
+        <img src="{{ url_for('static', filename='image/shape/cup.png') }}", width="140px", height="140px">
         <p>③カップ</p>
-        <img src="{{ url_for('static', filename='image/shape/cup.png') }}", width="auto", height="100px">
+        <a href="{{ url_for('select_feeling', shape='cup') }}">2000円<span class="tax">(税込み)</span></a>
     </div>
     <div class="shape-item">
+        <img src="{{ url_for('static', filename='image/shape/driedflower.png') }}", width="140px", height="140px">
         <p>④ドライフラワー</p>
-        <img src="{{ url_for('static', filename='image/shape/driedflower.png') }}", width="auto", height="100px">
+        <a href="{{ url_for('select_feeling', shape='driedflower') }}">3000円<span class="tax">(税込み)</span></a>
     </div>
     <div class="shape-item">
-        <a href="{{ url_for('select_feeling', shape='cup') }}">2000円<br><span class="tax">(税込み)</span></a>
-    </div>
-    <div class="shape-item">
-        <a href="{{ url_for('select_feeling', shape='driedflower') }}">3000円<br><span class="tax">(税込み)</span></a>
-    </div>
-    <div class="shape-item">
+        <img src="{{ url_for('static', filename='image/shape/giftflower.png') }}", width="140px", height="140px">
         <p>⑤ギフトフラワー</p>
-        <img src="{{ url_for('static', filename='image/shape/giftflower.png') }}", width="auto", height="100px">
+        <span>フラワーパックのみ</span>
+        <a href="{{ url_for('select_feeling', shape='giftflower') }}">10000円<span class="tax">(税込み)</span></a>
     </div>
     <div class="shape-item">
+        <img src="{{ url_for('static', filename='image/shape/wineflower.png') }}", width="140px", height="140px">
         <p>⑥ワインフラワー</p>
-        <img src="{{ url_for('static', filename='image/shape/wineflower.png') }}", width="auto", height="100px">
-    </div>
-    <div class="shape-item">
-        <a id="others" href="{{ url_for('select_feeling', shape='giftflower') }}">フラワーバックのみ<br>10000円<span class="tax">(税込み)</span></a>
-    </div>
-    <div class="shape-item">        
-        <a id="others" href="{{ url_for('select_feeling', shape='a-wineflower') }}">A ワイン+フラワー<br>15000円<span class="tax">(税込み)</span></a>
-        <a id="others" href="{{ url_for('select_feeling', shape='b-wineflower') }}">B ワイン+フラワー<br>20000円<span class="tax">(税込み)</span></a>
+        <span class="shape-item-size">大きさを選ぶ<span class="expand-wine"> ∨</span></span>
+        <div class="shape-value-wrapper-four">        
+            <a href="{{ url_for('select_feeling', shape='a-wineflower') }}">A ワイン+フラワー<br>15000円<span class="tax">(税込み)</span></a>
+            <a href="{{ url_for('select_feeling', shape='b-wineflower') }}">B ワイン+フラワー<br>20000円<span class="tax">(税込み)</span></a>
+        </div>
     </div>
     <div class="shape-item">
         <p>⑦相談</p>
     </div>
 </div>
 
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}
